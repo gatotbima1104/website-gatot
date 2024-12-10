@@ -23,7 +23,7 @@ export default function ProjectLayout({
   const isOdd = index % 2 != 0;
 
   return (
-    <div className={`w-[80%] min-h-[400px] lg:grid grid-cols-2 gap-10 md:flex flex-col space-y-5 sm:pb-5 sm:mb-20 sm:border-b-2 lg:border-none ${!isOdd? 'sm:flex-col-reverse' : ''}`}>
+    <div className={`w-[80%] min-h-[400px] lg:grid grid-cols-2 gap-10 md:flex flex-col space-y-5 sm:pb-5 sm:mb-5 sm:border-b-2 lg:border-none ${!isOdd? 'sm:flex-col-reverse' : ''}`}>
       {isOdd ? (
         <>
           <div className="w-full h-full flex items-center justify-center">

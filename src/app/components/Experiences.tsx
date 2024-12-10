@@ -3,7 +3,7 @@ import { ExpList } from '../constant/ExpList'
 
 export default function Experiences() {
   return (
-    <div className="w-full min-h-[75vh] flex flex-col items-center justify-center bg-[#0A192F] text-white font-geist-mono gap-10">
+    <div className="w-full min-h-[75vh] flex flex-col items-center justify-center bg-[#0A192F] text-white font-geist-mono gap-10" id='experience'>
     <h2 className='text-3xl py-5 min-w-[80%]'><span className='text-[#59E3C6] text-xl'>02.</span> Experiences <hr /></h2> 
         {   ExpList.length > 0 &&
             ExpList.map((el, index) => {

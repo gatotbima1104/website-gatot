@@ -15,7 +15,7 @@ import { MdEmail } from 'react-icons/md'
 
 export default function About() {
   return (
-    <div className='w-full min-h-screen flex justify-center items-center bg-[#0A192F] text-white font-geist-mono py-5'>
+    <div className='w-full min-h-screen flex justify-center items-center bg-[#0A192F] text-white font-geist-mono py-5' id='about'>
         
         <div className='w-[80%] lg:grid grid-cols-2 md:flex md:flex-col'>
             <div className='space-y-3 sm:pt-8'>
