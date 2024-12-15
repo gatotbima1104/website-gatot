@@ -16,7 +16,7 @@ export default function Blog() {
 
 
   return (
-    <div className="w-full min-h-[100vh] flex flex-col justify-center bg-[#0A192F] text-white font-geist-mono gap-2 py-5" id='blog'>
+    <div className="w-full min-h-[100vh] flex flex-col justify-center bg-[#0A192F] text-white font-geist-mono gap-2 py-5 md:pb-0 sm:pb-48" id='blog'>
       <h2 className='text-3xl py-5 mx-auto min-w-[80%]'><span className='text-[#59E3C6] text-xl'>04.</span> Blog <hr /></h2> 
       <div className='flex gap-2 justify-center'>
         <div className='min-w-[300px] min-h-[400px] rounded-xl hidden lg:block'>
