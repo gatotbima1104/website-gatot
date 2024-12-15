@@ -2,9 +2,9 @@
 
 import React, { useState } from 'react'
 import Image from 'next/image'
-import Article1 from "../../../public/article1.png"
-import Article2 from "../../../public/ppter.png"
-import Octoparse from "../../../public/octoparse.png"
+import Article1 from "../../../public/article1.webp"
+import Article2 from "../../../public/ppter.webp"
+import Octoparse from "../../../public/octoparse.webp"
 
 export default function Blog() {
 

@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
-import LogoProfile from '../../../public/logo-profile.png'
+import LogoProfile from '../../../public/logo-profile.webp'
 import { CgMenuLeftAlt } from 'react-icons/cg'
 import Link from 'next/link';
 

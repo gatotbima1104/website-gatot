@@ -1,9 +1,9 @@
-import Adobe from "../../../public/adobe.png"
-import Dex from "../../../public/dexscreener.png"
-import Gojek from "../../../public/gojek.png"
-import Parfume from "../../../public/parfume.png"
-import Runway from "../../../public/runway.png"
-import Todo from "../../../public/todolist.png"
+import Adobe from "../../../public/adobe.webp"
+import Dex from "../../../public/dexscreener.webp"
+import Gojek from "../../../public/gojek.webp"
+import Parfume from "../../../public/parfume.webp"
+import Runway from "../../../public/runway.webp"
+import Todo from "../../../public/todolist.webp"
 
 
 export const ProjectList = [
