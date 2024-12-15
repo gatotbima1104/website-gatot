@@ -9,7 +9,7 @@ export default function Experiences() {
             ExpList.map((el, index) => {
                 return index % 2 == 0? 
                 <div className='flex items-center justify-between gap-10 py-5' key={index}>
-                    <div className='min-w-[400px] min-h-[100px] flex flex-col pl-3 justify-center'>
+                    <div className='lg:min-w-[400px] max-w-[300px] min-h-[100px] flex flex-col pl-3 justify-center'>
                         <h3 className='text-base mb-2 font-bold border-b'>{el.as}</h3>
                         <p className='text-sm pb-1'>{el.timeline}</p>
                         {
@@ -22,7 +22,7 @@ export default function Experiences() {
                 </div> : 
                 <div className='flex items-center justify-between gap-10 py-5' key={index}>
                     <p className='bg-blue-500 font-bold min-w-[150px] p-2 ml-4 rounded-lg text-center'>{el.company}</p>
-                    <div className='min-w-[400px] h-[100px] flex flex-col pl-3 justify-center'>
+                    <div className='lg:min-w-[400px] max-w-[300px] h-[100px] flex flex-col pl-3 justify-center'>
                         <h3 className='text-base mb-2 font-bold pb-1 border-b'>{el.as}</h3>
                         <p className='text-sm'>{el.timeline}</p>
                         {

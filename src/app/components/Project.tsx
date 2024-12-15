@@ -31,7 +31,7 @@ export default function Project() {
           return (
             <Link href={"/portfolio/" + generateSlug(el.title)} key={idx}>
               <div
-                className="border rounded-xl hover:scale-110 hover:cursor-pointer hover:transition-all"
+                className="border rounded-xl hover:scale-110 hover:cursor-pointer hover:transition-all my-2"
                 // key={idx}
               >
                 <Image

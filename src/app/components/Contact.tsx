@@ -21,8 +21,8 @@ export default function Contact() {
     const formElement = e.target as HTMLFormElement;
     emailjs
       .sendForm(
-        emailJsApi,
-        templateId,
+        "service_msdc4xo",
+        "template_157utxt",
         formElement,
         "FtpzWg9abEKaxGzea"
       )
@@ -40,7 +40,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="w-full flex flex-col justify-center items-center min-h-screen bg-[#0A192F] text-white font-geist-mono gap-10" id="contact">
+    <div className="w-full flex flex-col justify-center items-center min-h-screen bg-[#0A192F] text-white font-geist-mono gap-10 py-10" id="contact">
       <h2 className='text-3xl pt-5 min-w-[80%]'><span className='text-[#59E3C6] text-xl'>05.</span> Contact <hr /></h2> 
       <h2 className="text-4xl font-bold pb-10">Contact me</h2>
       <form

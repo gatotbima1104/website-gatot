@@ -34,7 +34,7 @@ export default function Blog() {
         </div>
         <div className='max-w-[700px] max-h-[800px]'>
           <ul className='flex flex-col gap-2'>
-            <li className='min-h-[200px] border mx-2 lg:mx-0 rounded-md'>
+            <li className='min-h-[200px] border mx-10 lg:mx-0 rounded-md'>
               <div className='flex p-5 justify-between'>
                 <div>
                   <p className='pb-2'>Easy Step-by-Step Web Scraping with Node JS — Puppeteer in 2023</p>
@@ -46,7 +46,7 @@ export default function Blog() {
                 </div>
               </div>
             </li>
-            <li className='min-h-[200px] border mx-2 lg:mx-0 rounded-md'>
+            <li className='min-h-[200px] border mx-10 lg:mx-0 rounded-md'>
               <div className='flex p-5 justify-between'>
                 <div>
                   <p className='pb-2'>The best platform: The best way to scrape with no-code in 2024 -using Octoparse</p>
@@ -58,7 +58,7 @@ export default function Blog() {
                 </div>
               </div>
             </li>
-            <li className='min-h-[200px] border mx-2 lg:mx-0 rounded-md'>
+            <li className='min-h-[200px] border mx-10 lg:mx-0 rounded-md'>
               <div className='flex p-5 justify-between'>
                 <div>
                   <p className='pb-2'>Easy Step-by-Step Web Scraping with Node JS — Puppeteer in 2023</p>
