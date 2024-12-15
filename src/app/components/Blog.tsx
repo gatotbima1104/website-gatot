@@ -5,7 +5,6 @@ import Image from 'next/image'
 import Article1 from "../../../public/article1.png"
 import Article2 from "../../../public/ppter.png"
 import Octoparse from "../../../public/octoparse.png"
-import Link from 'next/link'
 
 export default function Blog() {
 
