@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Article1 from "../../../public/article1.png"
 import Article2 from "../../../public/ppter.png"
 import Octoparse from "../../../public/octoparse.png"
+import Link from 'next/link'
 
 export default function Blog() {
 
@@ -71,7 +72,7 @@ export default function Blog() {
               </div>
             </li>            
             <p className='text-center'>
-              <a target='_blank' href='' className='py-5 underline text-xl text-[#59E3C6] hover:cursor-pointer hover:text-blue-600'>More</a>
+              <a target='_blank' href='https://freeblogpost.netlify.app/' className='py-5 underline text-xl text-[#59E3C6] hover:cursor-pointer hover:text-blue-600'>More</a>
             </p>
           </ul>
 
