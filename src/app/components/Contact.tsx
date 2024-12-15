@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
-import { Bounce, toast, ToastContainer } from "react-toastify";
 
 export default function Contact() {
   const [form, setForm] = useState({
@@ -11,7 +10,9 @@ export default function Contact() {
     message: "",
   });
 
-  const onSuccess = () => toast("Message Submitted !");
+  const templateId = process.env.NEXT_PUBLIC_TEMPLATE_ID || ''
+  const emailJsApi = process.env.NEXT_PUBLIC_EMAIL_JS_API || ''
+
   const isFormFilled = !form.email || !form.subject || !form.message;
 
   const handleEmail = (e: React.FormEvent<HTMLFormElement>) => {
@@ -20,13 +21,12 @@ export default function Contact() {
     const formElement = e.target as HTMLFormElement;
     emailjs
       .sendForm(
-        "service_msdc4xo",
-        "template_157utxt",
+        emailJsApi,
+        templateId,
         formElement,
         "FtpzWg9abEKaxGzea"
       )
       .then(() => {
-        onSuccess();
         setForm({
           email: "",
           subject: "",
@@ -85,20 +85,6 @@ export default function Contact() {
         >
           Send
         </button>
-
-        <ToastContainer
-          position="bottom-right"
-          autoClose={5000}
-          hideProgressBar={false}
-          newestOnTop={false}
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
-          theme="dark"
-          transition={Bounce}
-        />
       </form>
     </div>
   );

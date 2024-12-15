@@ -6,7 +6,7 @@ import Photo from "../../../public/pp.jpeg"
 
 import { DiJsBadge } from 'react-icons/di'
 import { TbBrandTypescript } from 'react-icons/tb'
-import { SiFiverr, SiNestjs, SiPuppeteer } from 'react-icons/si'
+import { SiNestjs, SiPuppeteer } from 'react-icons/si'
 import { RiNextjsFill } from 'react-icons/ri'
 import { IoLogoElectron } from 'react-icons/io5'
 import { FaAws, FaGithub, FaLinkedin, FaMediumM } from 'react-icons/fa'

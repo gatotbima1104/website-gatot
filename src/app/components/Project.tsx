@@ -1,5 +1,4 @@
 import React from "react";
-import ProjectLayout from "./layout/ProjectLayout";
 import { ProjectList } from "../constant/ProjectsList";
 import Link from "next/link";
 import { generateSlug } from "../utils/Slug";
