@@ -10,9 +10,6 @@ export default function Contact() {
     message: "",
   });
 
-  const templateId = process.env.NEXT_PUBLIC_TEMPLATE_ID || ''
-  const emailJsApi = process.env.NEXT_PUBLIC_EMAIL_JS_API || ''
-
   const isFormFilled = !form.email || !form.subject || !form.message;
 
   const handleEmail = (e: React.FormEvent<HTMLFormElement>) => {
