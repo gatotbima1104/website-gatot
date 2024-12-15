@@ -20,7 +20,7 @@ export default function About() {
         <div className='w-[80%] lg:grid grid-cols-2 md:flex md:flex-col'>
             <div className='space-y-3 sm:pt-8'>
                 <h2 className='text-3xl'><span className='text-[#59E3C6] text-xl '>01.</span> About <hr /></h2> 
-                <p className='text-justify w-[100%] text-base pb-4'>A boy that loves to code and Enthusiast with Software Engineer things, I've been as <span className='text-[#59E3C6] underline'>Web Scraper</span> & <span className='text-[#59E3C6] underline'>Web Automation</span> for over 2+ years.
+                <p className='text-justify w-[100%] text-base pb-4'>A boy that loves to code and Enthusiast with Software Engineer things, I&#39;ve been as <span className='text-[#59E3C6] underline'>Web Scraper</span> & <span className='text-[#59E3C6] underline'>Web Automation</span> for over 2+ years.
                 </p>
 
                 <p className='text-justify w-[100%] text-base pb-4'>Assisting more than <span className='text-[#59E3C6] underline text-2xl'>15+</span> clients around the world related with <span className='text-[#59E3C6] underline'>Scraping</span> & <span className='text-[#59E3C6] underline'>Automation</span> things through platform <span className='text-[#59E3C6] underline'>Upwork</span> & <span className='text-[#59E3C6] underline'>Fiverr</span>.

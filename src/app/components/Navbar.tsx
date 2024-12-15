@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import LogoProfile from '../../../public/logo-profile.png'
 import { CgMenuLeftAlt } from 'react-icons/cg'
+import Link from 'next/link';
 
 export default function Navbar() {
 
@@ -65,11 +66,11 @@ export default function Navbar() {
                   isActive === el.id ? "text-[#59E3C6]" : "hover:text-[#59E3C6]"
                 }`}
                 >
-                <a><span className='text-xs text-[#59E3C6]'>{`0${idx + 1}.`}</span> {el.label}</a></li>
+                <p><span className='text-xs text-[#59E3C6]'>{`0${idx + 1}.`}</span> {el.label}</p></li>
               )
             })
           }
-            <a href="/cv.pdf" download={"cv.pdf"} className='py-2 px-4 rounded-lg border-[#59E3C6] border border-dashed hover:border-dotted hover:text-[#59E3C6]'>Resume</a>
+            <Link href="/cv.pdf" download={"cv.pdf"} className='py-2 px-4 rounded-lg border-[#59E3C6] border border-dashed hover:border-dotted hover:text-[#59E3C6]'>Resume</Link>
         </ul>
 
 
@@ -78,11 +79,11 @@ export default function Navbar() {
         </button>
 
         <ul className={`${isOpen? 'block': 'hidden'} absolute w-full min-h-screen bg-[#0A192F] left-0 top-24 grid grid-rows-6 items-center justify-start pl-20 gap-10`}>
-            <li className='hover:text-[#59E3C6] text-3xl'><a href="/"><span className='text-xl text-[#59E3C6]'>01.</span> Home</a></li>
-            <li className='hover:text-[#59E3C6] text-3xl'><a href="/about"><span className='text-xl text-[#59E3C6]'>02.</span> About</a></li>
-            <li className='hover:text-[#59E3C6] text-3xl'><a href="/project"><span className='text-xl text-[#59E3C6]'>03.</span> Project</a></li>
-            <li className='hover:text-[#59E3C6] text-3xl'><a href="/blog"><span className='text-xl text-[#59E3C6]'>04.</span> Blog</a></li>
-            <li className='hover:text-[#59E3C6] text-3xl'><a href="/contact"><span className='text-xl text-[#59E3C6]'>05.</span> Contact</a></li>
+            <li className='hover:text-[#59E3C6] text-3xl'><Link href="/"><span className='text-xl text-[#59E3C6]'>01.</span> Home</Link></li>
+            <li className='hover:text-[#59E3C6] text-3xl'><Link href="/about"><span className='text-xl text-[#59E3C6]'>02.</span> About</Link></li>
+            <li className='hover:text-[#59E3C6] text-3xl'><Link href="/project"><span className='text-xl text-[#59E3C6]'>03.</span> Project</Link></li>
+            <li className='hover:text-[#59E3C6] text-3xl'><Link href="/blog"><span className='text-xl text-[#59E3C6]'>04.</span> Blog</Link></li>
+            <li className='hover:text-[#59E3C6] text-3xl'><Link href="/contact"><span className='text-xl text-[#59E3C6]'>05.</span> Contact</Link></li>
             
         </ul>
     </nav>

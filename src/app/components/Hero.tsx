@@ -14,7 +14,7 @@ export default function Hero() {
   return (
     <div className="bg-[#0A192F] w-full min-h-screen flex justify-center items-center font-geist-mono py-5" id="home">
       <div className="flex flex-col border w-[85%] min-h-[500px] rounded border-dashed p-10 space-y-5">
-        <p className="text-[#c6eae2] underline pb-3">Hi, I'm</p>
+        <p className="text-[#c6eae2] underline pb-3">Hi, I&apos;m</p>
         <h2 className="text-white sm:text-3xl lg:text-5xl font-semibold">
           Muhamad Gatot.
         </h2>
