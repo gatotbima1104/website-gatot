@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "vercel-build": "npm install --le gacy-peer-deps && next build"
+    "vercel-build": "npm install --legacy-peer-deps && next build"
   },
   "dependencies": {
     "device-detector-js": "^3.0.3",
