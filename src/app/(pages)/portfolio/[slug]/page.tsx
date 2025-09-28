@@ -2,61 +2,73 @@
 
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
-
 import { usePathname } from "next/navigation";
 import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
+import { motion } from "framer-motion";
+
 import { generateSlug } from "@/app/utils/Slug";
 import { ProjectList } from "@/app/constant/ProjectsList";
 
-
 export default function ProductDetail() {
   const pathname = usePathname();
-  const slug = pathname.split("/").pop(); // Extract the slug from the URL
+  const slug = pathname.split("/").pop();
 
-  // Find the product that matches the slug
   const product = ProjectList.find((item) => generateSlug(item.title) === slug);
 
   if (!product) {
     return (
       <div className="w-full min-h-[100vh] bg-[#0A192F] text-white font-geist-mono flex items-center justify-center">
-        <h1 className="text-2xl">Product not found</h1>
+        <h1 className="text-2xl">❌ Product not found</h1>
       </div>
     );
   }
 
   return (
-    <div className="w-full min-h-[100vh] bg-[#0A192F] text-white font-geist-mono pt-5">
-      <div className="w-full mx-auto lg:grid grid-cols-2" >
-        <div className="flex items-center flex-col sm:py-5 lg:py-0">
-            <Link href="/" className="text-blue-500 underline mb-10 lg:mr-[450px] text-left">
-            Back to Home
-            </Link>
-            <p className="w-[80%] mb-2">{pathname}</p>
-            <Image
+    <div className="w-full min-h-[100vh] bg-[#0A192F] text-white font-geist-mono pb-10">
+      <div className="w-[90%] max-w-5xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="flex flex-col items-center"
+        >
+          <Image
             alt={product.title}
             src={product.image}
-            className="w-[80%] object-cover rounded-xl mb-5"
-            />
-        </div>
-        <div className="rounded-lg p-5 mb-5 mr-5 border sm:ml-5 lg:ml-0 ml-5">
-            <h1 className="text-3xl mb-3 w-[80%]">{product.title}</h1>
-            <p className="text-[#59E3C6] hover:text-blue-600 text-sm pb-3 flex items-center"><MdOutlineKeyboardDoubleArrowRight className="mr-2" /> What is this product?</p>
-            <p className="text-base mb-5">{product.desc}</p>
+            width={900}
+            height={500}
+            className="rounded-2xl shadow-lg object-cover mb-10"
+          />
+        </motion.div>
 
-            <p className="text-[#59E3C6] hover:text-blue-600 text-sm pb-3 flex items-center"><MdOutlineKeyboardDoubleArrowRight className="mr-2" /> What purpose does this serve?</p>
-            <p className="text-base mb-5">{product.situation}</p>
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="backdrop-blur-xl bg-white/5 rounded-xl p-8 shadow-lg space-y-8 pb-5"
+        >
+          <h1 className="text-4xl font-bold text-[#59E3C6] mb-6">
+            {product.title}
+          </h1>
 
-            <p className="text-[#59E3C6] hover:text-blue-600 text-sm pb-3 flex items-center"><MdOutlineKeyboardDoubleArrowRight className="mr-2" /> What tasks does this product perform?</p>
-            <p className="text-base mb-5">{product.task}</p>
-
-            <p className="text-[#59E3C6] hover:text-blue-600 text-sm pb-3 flex items-center"><MdOutlineKeyboardDoubleArrowRight className="mr-2" /> What actions are taken by this product?</p>
-            <p className="text-base mb-5">{product.action}</p>
-
-            <p className="text-[#59E3C6] hover:text-blue-600 text-sm pb-3 flex items-center"><MdOutlineKeyboardDoubleArrowRight className="mr-2" /> What are the outcomes of using this product?</p>
-            <p className="text-base mb-5">{product.result}</p>
-
-        </div>
+          {[
+            { label: "What is this product?", value: product.desc },
+            { label: "What purpose does this serve?", value: product.situation },
+            { label: "What tasks does this product perform?", value: product.task },
+            { label: "What actions are taken by this product?", value: product.action },
+            { label: "What are the outcomes of using this product?", value: product.result },
+          ].map((section, i) => (
+            <div key={i}>
+              <p className="flex items-center text-[#59E3C6] text-lg mb-2">
+                <MdOutlineKeyboardDoubleArrowRight className="mr-2 text-xl" />
+                {section.label}
+              </p>
+              <p className="text-base text-gray-300 leading-relaxed">
+                {section.value}
+              </p>
+            </div>
+          ))}
+        </motion.div>
       </div>
     </div>
   );

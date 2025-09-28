@@ -4,7 +4,11 @@ import Gojek from "../../../public/gojek.webp"
 import Parfume from "../../../public/parfume.webp"
 import Runway from "../../../public/runway.webp"
 import Todo from "../../../public/todolist.webp"
-
+import KBIL from "../../../public/KBIL.png"
+import Dissposses from "../../../public/Disposses.png"
+import Kokiku from "../../../public/Kokiku.png"
+import Pyramist from "../../../public/Pyramist.png"
+import Olla from "../../../public/Olla.png"
 
 export const ProjectList = [
     {
@@ -50,10 +54,13 @@ export const ProjectList = [
         key: 4,
         image: Parfume,
         deployment: "https://www.loom.com/share/49d21f30aca7414aa8621723b49068bf?sid=8468cd43-bbc9-4196-abdc-7a19d72d2386",
-        // github: "",
         title: "Automation Review Parfume",
         tags: ["Puppeteer", "NodeJS", "Google APIs"],
-        desc: "Automation Leave review for creating bulk testimonies to a parfume."
+        desc: "Automation tool to generate and submit bulk perfume reviews/testimonies.",
+        situation: "A client needed to boost product visibility by automating the process of leaving multiple reviews and testimonies for perfume products on online platforms.",
+        task: "My role was to design and build a Puppeteer-based automation script capable of handling bulk submissions while maintaining reliability and avoiding detection.",
+        action: "Developed Node.js automation flows using Puppeteer to simulate human-like review posting, integrated Google APIs for managing account sessions, and implemented retry/error handling for large-scale runs.",
+        result: "The automation successfully submitted bulk perfume testimonies efficiently, reducing manual work by over 90% and providing the client with a scalable review-generation system."
     },
     {
         key: 5,
@@ -79,4 +86,65 @@ export const ProjectList = [
         tags: ["NextJS"],
         desc: "Making a simple app for TODO list with NextJS."
     },
-]
+    {
+        key: 7,
+        title: "K-BILL IOS App (Split Bill App)",
+        desc: "An app that can help you manage your bills and expenses, so you can have a better financial life.",
+        github: "https://github.com/gatotbima1104/splitbill-group7",
+        tags: ["Swift", "iOS", "SwiftUI", "Core Data"],
+        image: KBIL,
+        situation: "In daily life, managing bills and expenses can be a challenging task, especially when it comes to splitting bills among friends or family members. Many people struggle to keep track of who owes what, leading to confusion and potential conflicts.",
+        task: "The main task was to develop an iOS application that simplifies the process of managing and splitting bills. The app needed to be user-friendly, efficient, and capable of handling various types of expenses.",
+        action: "I utilized Swift and SwiftUI to design and develop the app, ensuring a smooth and intuitive user interface. Core Data was implemented for local data storage, allowing users to save and manage their bills offline. The app includes features such as adding expenses, categorizing them, and calculating individual shares automatically.",
+        result: "The K-BILL app successfully addresses the challenges of bill management by providing a straightforward solution for users. It has received positive feedback for its ease of use and effectiveness in simplifying the bill-splitting process"
+    },
+    {
+        key: 8,
+        title: "Dissposses: Escape the souls",
+        desc: "A game that fill your peacefullness for escaping souls from Puput bad possession",
+        github: "https://github.com/benz-26/GhostVsFishing",
+        tags: ["Swift", "iOS", "SpriteKit", "Core Data"],
+        image: Dissposses,
+        situation: "We were learning and experimenting with our very first full game development project, aiming to create an engaging experience that combines storytelling with interactive gameplay using SpriteKit.",
+        task: "My responsibility was to design and implement the settings system, build the fishing rewards mechanism, and manage the user database for saving progress. I focused on integrating SpriteKit scenes with Core Data for persistence.",
+        action: "I developed custom SpriteKit nodes for the fishing mechanic, designed reward animations, and implemented a smooth flow for unlocking collectibles. I also built Core Data models to handle user progress, achievements, and inventory.",
+        result: "The game was downloaded by more than 50 users through TestFlight and became one of the standout games during our Challenge moment, receiving recognition for its creativity and execution."
+    },
+    {
+        key: 9,
+        title: "KOKIKU: Recommend your food based on your ingredients",
+        desc: "An app that recommend food based on ingredients",
+        github: "https://github.com/gatotbima1104/MyQuickCook",
+        tags: ["Swift", "iOS", "SwiftUI", "Core Data", "CoreML", "Object Detection"],
+        image: Kokiku,
+        situation: "Developed during Apple Developer Academy as a project to explore CoreML and computer vision in daily life, focusing on food discovery based on available ingredients.",
+        task: "My responsibility was to integrate the CoreML object detection model with the camera, manage the ingredient database using Core Data, and connect it with recipe recommendation logic.",
+        action: "Implemented a custom camera view with object detection for recognizing ingredients, built data persistence for saving user preferences, and created a SwiftUI interface for recommending recipes dynamically.",
+        result: "The app successfully demonstrated ingredient recognition and smart recipe suggestions, receiving positive feedback during Academy reviews as an innovative food-tech solution."
+    },
+    {
+        key: 10,
+        title: "Pyramyst: Crack the code ⭐",
+        desc: "WatchOS game that give you experience for cracking code with haptic feel",
+        github: "https://github.com/Pyramyst-WatchOS-Game",
+        tags: ["Swift", "iOS", "SwiftUI", "SpriteKit", "Core Data", "watchOS"],
+        image: Pyramist,
+        situation: "Created as part of an advanced Academy challenge to experiment with watchOS game development, integrating unique watch interactions like Digital Crown rotation and haptics.",
+        task: "My focus was to design the game levels, collectible items, and inventory system, while ensuring smooth integration between SpriteKit gameplay and SwiftUI watchOS UI.",
+        action: "Built a puzzle-based code cracking system in SpriteKit, designed collectible rewards (e.g., Golden Scarab, Ankh Charm), and implemented Core Data persistence to save progress across levels.",
+        result: "Pyramyst became a standout watchOS game prototype with immersive haptic feedback and creative puzzles, receiving recognition within the Academy for pushing the limits of watchOS gameplay."
+    },
+    {
+        key: 11,
+        title: "Olla: Scheduler Buddy",
+        desc: "An app that automate your schedule smartly",
+        github: "https://github.com/hafizsiregar/Challenge-6",
+        tags: ["Swift", "iOS", "SwiftUI", "Core Data", "OpenAI", "Siri", "App Intent"],
+        image: Olla,
+        situation: "Developed during Challenge 6 at the Apple Developer Academy to solve student-freelancer time management problems using AI-assisted scheduling.",
+        task: "I was responsible for integrating the OpenAI backend with the SwiftUI client, designing the scheduling timeline UI, and building Siri/AppIntent support for quick scheduling.",
+        action: "Implemented API communication with OpenAI for generating smart schedules, created draggable timeline and chat-based UI in SwiftUI, and added Siri Shortcuts/App Intents for voice-driven task creation.",
+        result: "Olla successfully automated scheduling with AI assistance, tested with real users, and was recognized as one of the most impactful solutions in addressing productivity challenges."
+    }
+
+].sort((a,b) => b.key - a.key)
